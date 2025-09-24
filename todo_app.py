@@ -9,7 +9,7 @@ tasks = []
 # ================= Funções ====================
 
 def celebrate():
-    messagebox.showinfo("Parabéns! 🎉", "Você atingiu sua meta de tarefas!\n🎉🎉🎉")
+    messagebox.showinfo("Yup! 🎉", "You done i guess LOL!\n🎉🎉🎉")
 
 def update_progress():
     completed = len(tasks_done)
@@ -32,7 +32,7 @@ def add_task():
         entry_task.delete(0, tk.END)
         update_progress()
     else:
-        messagebox.showwarning("Aviso", "Por favor, insira uma tarefa.")
+        messagebox.showwarning("HEY", "You need to do something")
 
 def delete_task():
     if tasks:
@@ -75,12 +75,12 @@ def draw_tasks():
 # ================== UI ====================
 
 root = tk.Tk()
-root.title("To-do List estilizada (Tkinter)")
+root.title("To-do List i think LOL")
 root.geometry("500x600")
 root.configure(bg="#f5f5f5")
 
 # Perguntar meta inicial
-task_goal = simpledialog.askinteger("Meta do dia", "Quantas tarefas você quer concluir hoje?", minvalue=1)
+task_goal = simpledialog.askinteger("Sooo...", "How many things should we do today??", minvalue=1)
 
 # Entrada
 entry_frame = tk.Frame(root, bg="#f5f5f5")
@@ -95,7 +95,7 @@ button_add = tk.Button(entry_frame, text="Adicionar", command=add_task,
 button_add.pack(side="left")
 
 # Barra de progresso
-progress_label = tk.Label(root, text="0/0 tarefas concluídas", bg="#f5f5f5", font=("Arial", 11))
+progress_label = tk.Label(root, text="0/0 Plz do something", bg="#f5f5f5", font=("Arial", 11))
 progress_label.pack(pady=5)
 
 progress_bar = ttk.Progressbar(root, orient="horizontal", length=400, mode="determinate")
@@ -106,7 +106,7 @@ task_frame = tk.Frame(root, bg="#f5f5f5")
 task_frame.pack(fill="both", expand=True, pady=10)
 
 # Botão deletar
-button_delete = tk.Button(root, text="Deletar última tarefa", command=delete_task,
+button_delete = tk.Button(root, text="Delete", command=delete_task,
                           bg="#E57373", fg="white", font=("Arial", 11, "bold"),
                           relief="flat", padx=10, pady=5)
 button_delete.pack(pady=10)
