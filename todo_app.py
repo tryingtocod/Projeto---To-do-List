@@ -83,7 +83,7 @@ root = tk.Tk()
 root.title("To-do List estilizada (Tkinter puro)")
 
 # Perguntar meta inicial
-task_goal = simpledialog.askinteger("Meta diária", "Quantas tarefas deseja concluir hoje?", minvalue=1)
+task_goal = simpledialog.askinteger("Can you be productive today?", minvalue=1)
 
 # Canvas de entrada com bordas arredondadas
 input_canvas = tk.Canvas(root, width=420, height=60, bg="white", highlightthickness=0)
